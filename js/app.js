@@ -1,6 +1,6 @@
 'use strict';
 
-/* 
+let score = 0;
 //Q1
 let uName=prompt('please enter your name');
 
@@ -9,8 +9,9 @@ alert("welcome to my page "+uName+" please answer these yes/no y/n Q and Enjoy g
 let Q1=prompt ('Is my name Wijdan Khaled?');
 switch(Q1.toUpperCase()){ 
 case 'YES' :console.log ('yes , my name is wijdan'); 
-case 'Y':console.log ('yes ,my name is wijdan'); 
+case 'Y':console.log ('yes ,my name is wijdan');
 alert('yes , my name is wijdan now you know my name');
+score++;
 break;    
 case'NO':console.log('no , it is not');  
 case 'N':console.log ('no , no it is not'); 
@@ -29,7 +30,8 @@ alert('yes , my age is 22');
 break;    
 case'NO':console.log('no , it is not');  
 case 'N':console.log ('no , no it is not'); 
-alert ('no ,it is 22');  
+alert ('no ,it is 22'); 
+score++; 
 break;    
 default:    
 console.log('plz ask me agin');    
@@ -40,6 +42,7 @@ let Q3=prompt ('Do you think I am addicted to coffee');
 switch(Q3.toUpperCase()){ 
 case 'YES' :console.log ('yes , am i'); 
 case 'Y':console.log ('yes ,am i'); 
+score++;
 alert('yes , I am addicted to coffee ');
 break;    
 case'NO':console.log('no , iam not');  
@@ -56,6 +59,7 @@ switch(Q4.toUpperCase()){
 case 'YES' :console.log ('yes , it is'); 
 case 'Y':console.log ('yes ,it is'); 
 alert('yes , my cat name is cady ');
+score++;
 break;    
 case'NO':console.log('no , it is not');  
 case 'N':console.log ('no ,it is not'); 
@@ -71,6 +75,7 @@ switch(Q5.toUpperCase()){
 case 'YES' :console.log ('yes , i do'); 
 case 'Y':console.log ('yes ,i do'); 
 alert('yes ,i do speak spansh ');
+score++;
 break;    
 case'NO':console.log('no , i dont');  
 case 'N':console.log ('no ,i dont'); 
@@ -80,10 +85,10 @@ default:
 console.log('plz ask me agin');    
 alert('plz ask me agin');}
 
-*/
+
 
 //Q6
-let score = 0;
+
 
 alert("Guess with me, you have 4 attempts to get to the correct answer");
 function Qustion6(){
@@ -113,28 +118,30 @@ alert ('you finish your attemped the answer is 3 ');
 }
 Qustion6();
 
-function question7(){
-let myfavmovie=['you befor me','black lest','the platform','legoned','it'];
-for(let i=0 ; i<myfavmovie.length; i++){
-  let userAnsw = prompt('can you guss my favert movie');
- userAnsw.toUpperCase();
+function questionSeven() {
+  let favmovie = ['it', 'platforme', 'blacke list', 'anne', 'me before you'];
 
-    if (userAnsw == myfavmovie[i]) {
-        alert('correct answer');
-        score++;
-    
-        break;
+  for (let i = 0; i < 6; i++) {
+      let userAnsw = prompt('Can you guess my favorite movie?');
+      userAnsw.toLowerCase();
+
+      for (var j = 0; j < favmovie.length; j++){
+          if ( userAnsw === favmovie[j]) {
+              alert('correct answer');
+              score++;
+              i = 6;
+              break;
+          }
+      }
+      if (i !==6){
+          alert('Sorry wrong answer, try again');
+      }
     
   }
-  else if (userAnsw !== myfavmovie[i]){
-    alert('wrong answer ,please try again');
-break;
-  }
-
-
+  
 }
-alert ('you finish your attemped the answer is  '+ myfavmovie);
-}
-alert('you got ' + score + ' correct answers!');
 
-question7();
+questionSeven();
+alert('my favert movies are'+favmovi);
+
+alert(' You got ' + score + ' correct answers!');
