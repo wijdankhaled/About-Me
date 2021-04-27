@@ -1,6 +1,6 @@
 'use strict';
 
- 
+/* 
 //Q1
 let uName=prompt('please enter your name');
 
@@ -79,24 +79,62 @@ break;
 default:    
 console.log('plz ask me agin');    
 alert('plz ask me agin');}
-/*
+
+*/
+
 //Q6
+let score = 0;
+
 alert("Guess with me, you have 4 attempts to get to the correct answer");
+function Qustion6(){
 let Q6=prompt ('How many programming languages ​​I tried to learn');
-Number(Q6);
-for(let i=1;i<=4;i++){
-  if (Q6 === 3)
-{
+console.log(Q6);
+for (let i = 1; i < 4 ; i++) {
+if (Q6  == 3){
+  alert('you answerd correctly ');
+  score++;
+  //alert ('your score' + score );
   
-  alert("you got the correct answer");
-}
-else if(Q6>3) {
-  alert("your answer is too high");
-  alert("please try agan");
 break;
+} else if (Q6 > 3) {
+  alert('no , it is too high');
+  Q6=  prompt ('guess again' , 'answer with numbers' );
+   
+} else if (Q6 < 3){
+  alert('no , it is too low');
+  Q6=  prompt ('guess again' , 'answer with numbers' );
 
 }
-else if(Q6 < 3){
-  alert("your answer is too low");
+
 }
-}*/
+
+alert ('you finish your attemped the answer is 3 ');
+
+}
+Qustion6();
+
+function question7(){
+let myfavmovie=['you befor me','black lest','the platform','legoned','it'];
+for(let i=0 ; i<myfavmovie.length; i++){
+  let userAnsw = prompt('can you guss my favert movie');
+ userAnsw.toUpperCase();
+
+    if (userAnsw == myfavmovie[i]) {
+        alert('correct answer');
+        score++;
+    
+        break;
+    
+  }
+  else if (userAnsw !== myfavmovie[i]){
+    alert('wrong answer ,please try again');
+break;
+  }
+
+
+}
+alert ('you finish your attemped the answer is  '+ myfavmovie);
+}
+alert('you got ' + score + ' correct answers!');
+
+question7();
