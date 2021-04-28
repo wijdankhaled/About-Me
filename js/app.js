@@ -1,12 +1,14 @@
 'use strict';
 
 let score = 0;
-//Q1
+// //Q1
 let uName=prompt('please enter your name');
 
 
 alert("welcome to my page "+uName+" please answer these yes/no y/n Q and Enjoy getting to know me");
-let Q1=prompt ('Is my name Wijdan Khaled?');
+
+function question1 (){
+  let Q1=prompt ('Is my name Wijdan Khaled?');
 switch(Q1.toUpperCase()){ 
 case 'YES' :console.log ('yes , my name is wijdan'); 
 case 'Y':console.log ('yes ,my name is wijdan');
@@ -20,8 +22,11 @@ break;
 default:    
 console.log('plz ask me agin');    
 alert('plz ask me agin');}
+}
+question1();
 
 //Q2
+function question2 (){
 let Q2=prompt ('my age is older than 22');
 switch(Q2.toUpperCase()){ 
 case 'YES' :console.log ('yes , my age is 22'); 
@@ -36,8 +41,11 @@ break;
 default:    
 console.log('plz ask me agin');    
 alert('plz ask me agin');}
+}
+question2();
 
 //Q3
+function question3 (){
 let Q3=prompt ('Do you think I am addicted to coffee');
 switch(Q3.toUpperCase()){ 
 case 'YES' :console.log ('yes , am i'); 
@@ -52,8 +60,11 @@ break;
 default:    
 console.log('plz ask me agin');    
 alert('plz ask me agin');}
+}
+question3();
 
 //Q4
+function question4 (){
 let Q4=prompt ('is my cate name cady?');
 switch(Q4.toUpperCase()){ 
 case 'YES' :console.log ('yes , it is'); 
@@ -68,8 +79,11 @@ break;
 default:    
 console.log('plz ask me agin');    
 alert('plz ask me agin');}
+}
+question4();
 
 //Q5
+function question5 (){
 let Q5=prompt ('do i speake spansh?');
 switch(Q5.toUpperCase()){ 
 case 'YES' :console.log ('yes , i do'); 
@@ -84,7 +98,8 @@ break;
 default:    
 console.log('plz ask me agin');    
 alert('plz ask me agin');}
-
+}
+question5();
 
 
 //Q6
@@ -98,7 +113,7 @@ for (let i = 1; i < 4 ; i++) {
 if (Q6  == 3){
   alert('you answerd correctly ');
   score++;
-  //alert ('your score' + score );
+  alert ('your score' + score );
   
 break;
 } else if (Q6 > 3) {
